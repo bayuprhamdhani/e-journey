@@ -28,4 +28,11 @@ class Student extends Model
         'major',
     ];
 
+// Student.php
+public function majorRelation()
+{
+    return $this->belongsTo(Major::class, 'major'); // kolom 'major' di students = id di majors
+}
+
+
 }

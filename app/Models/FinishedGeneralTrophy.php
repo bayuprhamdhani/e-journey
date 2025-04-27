@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class FinishedGeneralTrophy extends Model
 {
     use HasFactory;
+    protected $fillable = ['user', 'trophy', 'pict', 'status'];
 }

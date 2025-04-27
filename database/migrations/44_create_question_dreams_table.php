@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pinned_general_trophies', function (Blueprint $table) {
+        Schema::create('question_dreams', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user');
-            $table->unsignedBigInteger('general_trophy');
+            $table->string('question_dream');
+            $table->unsignedBigInteger('intelligence_type');
             $table->timeStamps();
 
-            $table->foreign('user')->references('id')->on('users');
-            $table->foreign('general_trophy')->references('id')->on('general_trophies');
+            $table->foreign('intelligence_type')->references('id')->on('intelligence_types');
         });
     }
 
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pinned_general_trophies');
+        Schema::dropIfExists('question_dreams');
     }
 };

@@ -39,9 +39,11 @@ class User extends Authenticatable
     ];
 
 
+
+// Di model User.php
 public function student()
 {
-    return $this->belongsTo(Student::class, 'user'); // 'user' adalah kolom foreign key di tabel users
+    return $this->hasOne(Student::class, 'id', 'user');
 }
 
     /**

@@ -1,0 +1,2702 @@
+[
+  {
+    "id": "L001",
+    "question": "Kamu suka banget cerita ke orang lain, nggak sih?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L002",
+    "question": "Hal-hal kecil gampang banget nyangkut di ingetan kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L003",
+    "question": "Permainan kata-kata tuh bikin kamu semangat?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L004",
+    "question": "Baca buku itu udah kayak hobi kamu tiap hari?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L005",
+    "question": "Kamu jago banget ngomong di depan orang?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L006",
+    "question": "Kalau disuruh pilih, kamu lebih suka pelajaran bahasa daripada matematika?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L007",
+    "question": "Suka nulis atau ngobrolin ide yang muncul di kepala kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L008",
+    "question": "Kamu punya banyak banget kosakata? Gak pernah kehabisan kata pas ngomong?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L009",
+    "question": "Kamu senang banget nulis karangan atau apapun yang berbau tulisan?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L010",
+    "question": "Pas presentasi, kamu lebih milih jadi penulis skrip daripada pembicara?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L011",
+    "question": "Kalau ngomong tuh kamu bisa pakai banyak cara biar orang paham maksudmu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L012",
+    "question": "Debat atau diskusi tuh bikin kamu semangat mikir?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K001"
+    ]
+  },
+  {
+    "id": "L013",
+    "question": "Pelajaran matematika tuh favorit kamu banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L014",
+    "question": "Teka-teki angka bikin kamu penasaran terus?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L015",
+    "question": "Kamu suka ngerjain soal hitungan dan nemuin jawabannya?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L016",
+    "question": "Kalau nginget sesuatu, kamu lebih suka urutin logikanya?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L017",
+    "question": "Kamu sering penasaran gimana sih benda-benda itu bisa jalan?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L018",
+    "question": "Mainan angka-angka dan komputer tuh seru banget buat kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L019",
+    "question": "Kamu jago main catur, sudoku, atau monopoli?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L020",
+    "question": "Ngitung di luar kepala tuh hal gampang buat kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L021",
+    "question": "Kalau barang rusak, kamu suka bongkar sendiri buat tahu cara kerjanya?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L022",
+    "question": "Kamu lebih suka mikir sebelum bertindak biar semua jelas?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L023",
+    "question": "Film atau buku detektif tuh favorit kamu banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L024",
+    "question": "Kamu suka banget eksperimen kecil-kecilan di rumah?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K002"
+    ]
+  },
+  {
+    "id": "L025",
+    "question": "Kalau cari tempat, kamu lebih percaya sama peta daripada tulisan?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L026",
+    "question": "Puzzle gambar atau labirin tuh kamu banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L027",
+    "question": "Fotografi itu salah satu hal yang kamu suka?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L028",
+    "question": "Kamu suka gambar dan bikin hal-hal kreatif?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L029",
+    "question": "Pelajaran geografi itu lebih seru daripada matematika menurut kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L030",
+    "question": "Kamu sering banget coret-coret di kertas pas bengong?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L031",
+    "question": "Kalau baca majalah, gambar lebih menarik daripada teksnya?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L032",
+    "question": "Main lego atau bangun 3D itu kamu jagonya?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L033",
+    "question": "Kamu lebih mudah ngerti kalau lihat gambar daripada baca teks?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L034",
+    "question": "Seni rupa itu pelajaran yang kamu tunggu-tunggu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L035",
+    "question": "Atur-atur ulang ruang kamar tuh kegiatan favorit?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L036",
+    "question": "Kamu bisa bayangin bentuk benda dari berbagai sisi dengan mudah?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K003"
+    ]
+  },
+  {
+    "id": "L037",
+    "question": "Dengerin musik atau radio itu udah jadi rutinitas?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L038",
+    "question": "Kamu suka nyanyi-nyanyi kecil waktu ngapa-ngapain?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L039",
+    "question": "Suara kamu dibilang bagus gak sama temen-temen?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L040",
+    "question": "Kamu bisa main alat musik dengan cukup oke?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L041",
+    "question": "Belajar sambil denger musik itu wajib?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L042",
+    "question": "Buat nginget sesuatu, kamu suka bikin nadanya sendiri?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L043",
+    "question": "Musik apapun pasti kamu nikmatin?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L044",
+    "question": "Baru denger lagu sekali dua kali udah bisa nyanyiin?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L045",
+    "question": "Pas mikir, kamu suka sambil ngetuk-ngetuk meja bikin irama?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L046",
+    "question": "Musik bikin kamu semangat ngerjain apapun?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L047",
+    "question": "Kalau ada nada fals kamu bisa langsung sadar?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L048",
+    "question": "Jalan kaki sambil nyanyi-nyanyi itu kamu banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K004"
+    ]
+  },
+  {
+    "id": "L049",
+    "question": "Olahraga tuh bikin kamu happy banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L050",
+    "question": "Kamu suka bikin prakarya atau menjahit gitu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L051",
+    "question": "Kamu suka megang langsung benda baru biar lebih paham?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L052",
+    "question": "Kamu nggak bisa duduk diam kelamaan?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L053",
+    "question": "Kalau ngomong kamu suka pakai gerakan tangan atau gaya tubuh?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L054",
+    "question": "Kamu pernah dapet prestasi di olahraga?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L055",
+    "question": "Kegiatan ekstrim atau menegangkan itu seru buat kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L056",
+    "question": "Kerjaan tangan kayak bikin barang tuh kamu jago?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L057",
+    "question": "Kalau barang rusak, kamu suka bongkar trus pasang lagi?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L058",
+    "question": "Kamu harus coba sendiri biar bisa ngerti sesuatu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L059",
+    "question": "Ide-ide kamu muncul pas jalan-jalan atau olahraga?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L060",
+    "question": "Kamu rutin ikut kegiatan fisik atau olahraga?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K005"
+    ]
+  },
+  {
+    "id": "L061",
+    "question": "Kamu gampang banget berteman sama orang?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L062",
+    "question": "Gabung organisasi atau nongkrong bareng tuh hal seru buat kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L063",
+    "question": "Kamu punya beberapa temen deket banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L064",
+    "question": "Kamu suka ngajarin orang tentang hal yang kamu tahu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L065",
+    "question": "Ngerjain tugas kelompok itu lebih kamu suka?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L066",
+    "question": "Orang sering minta saran atau pendapat kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L067",
+    "question": "Kalau belajar, kamu suka minta temen ngetesin?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L068",
+    "question": "Kalau debat, kamu suka ngajak temen buat bantuin argumen?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L069",
+    "question": "Ikut acara sosial atau organisasi tuh kamu banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L070",
+    "question": "Kamu sering ditunjuk jadi pemimpin dalam kelompok?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L071",
+    "question": "Kalau ada masalah, kamu mending minta bantuan orang lain?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L072",
+    "question": "Ngabisin waktu bareng temen lebih seru dari main sendirian?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K006"
+    ]
+  },
+  {
+    "id": "L073",
+    "question": "Kamu lebih suka ngelakuin hal-hal sendiri?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L074",
+    "question": "Kamu punya buku harian atau catatan pribadi?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L075",
+    "question": "Kamu bisa belajar dari pengalaman yang udah-udah?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L076",
+    "question": "Keramaian itu bukan tempat favorit kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L077",
+    "question": "Kamu tahu banget kelebihan dan kekurangan diri sendiri?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L078",
+    "question": "Kamu orangnya mandiri dan nggak gampang terpengaruh?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L079",
+    "question": "Kalau nginget sesuatu, kamu suka meresapi situasinya?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L080",
+    "question": "Akhir pekan sendirian lebih asik daripada ramai-ramai?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L081",
+    "question": "Kamu mikir dulu sebelum memperbaiki barang yang rusak?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L082",
+    "question": "Kamu ngerasa udah cukup mandiri?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L083",
+    "question": "Kamu punya tujuan hidup yang jelas dan sering kamu pikirin?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L084",
+    "question": "Kamu punya hobi yang jarang orang tahu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K007"
+    ]
+  },
+  {
+    "id": "L085",
+    "question": "Kamu peka banget sama apa yang terjadi di sekitar?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L086",
+    "question": "Jalan-jalan di taman sambil liat-liat tanaman itu bikin adem?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L087",
+    "question": "Berkebun itu kegiatan yang menyenangkan?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L088",
+    "question": "Kamu punya minat gede sama alam dan lingkungan?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L089",
+    "question": "Kalau udah gede, kamu pengen tinggal di tempat yang deket sama alam?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L090",
+    "question": "Jalan-jalan atau hiking di alam terbuka bikin kamu seneng banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L091",
+    "question": "Kamu bisa sebut nama tumbuhan atau hewan di sekitar kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L092",
+    "question": "Kalau debat, kamu suka bandingin sama info yang pernah kamu tahu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L093",
+    "question": "Kamu suka ngeliat sekitar buat cari cara benerin barang rusak?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L094",
+    "question": "Tugas biologi atau ilmu alam tuh kamu banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L095",
+    "question": "Kamu bisa jelasin perbedaan jenis tumbuhan atau hewan dengan jelas?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L096",
+    "question": "Kamu punya hewan peliharaan dan suka berkebun juga?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K008"
+    ]
+  },
+  {
+    "id": "L097",
+    "question": "Ngobrol soal kehidupan tuh bikin kamu mikir panjang?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L098",
+    "question": "Nilai agama buat kamu penting banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L099",
+    "question": "Kamu suka liat karya seni dan menikmatinya?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L100",
+    "question": "Meditasi atau relaksasi tuh penting buat kamu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L101",
+    "question": "Kamu suka jalan-jalan ke tempat wisata alam?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L102",
+    "question": "Baca buku filsafat tuh kamu nikmatin banget?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L103",
+    "question": "Belajar hal baru lebih gampang kalau kamu paham maknanya?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L104",
+    "question": "Kamu penasaran banget soal kehidupan lain di luar angkasa?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L105",
+    "question": "Sejarah dan budaya kuno bikin kamu merasa tercerahkan?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L106",
+    "question": "Kamu senang baca buku sejarah?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L107",
+    "question": "Kamu bisa jelasin budaya kuno dengan baik?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  },
+  {
+    "id": "L108",
+    "question": "Belajar sejarah bikin kamu makin tertarik sama masa lalu?",
+    "options": [
+      {
+        "text": "Sangat Nggak Setuju",
+        "score": 1
+      },
+      {
+        "text": "Nggak Setuju",
+        "score": 2
+      },
+      {
+        "text": "Kurang Setuju",
+        "score": 3
+      },
+      {
+        "text": "Setuju Banget",
+        "score": 4
+      }
+    ],
+    "intelligence_type": [
+      "K009"
+    ]
+  }
+]

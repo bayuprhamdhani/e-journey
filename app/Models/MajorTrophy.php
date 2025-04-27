@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class MajorTrophy extends Model
 {
     use HasFactory;
+
+    public function committeeRelation2()
+    {
+        return $this->belongsTo(Committee::class, 'committee');
+    }
 }

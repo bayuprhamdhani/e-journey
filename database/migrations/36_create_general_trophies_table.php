@@ -20,11 +20,12 @@ return new class extends Migration
             $table->date('date');
             $table->string('description');
             $table->string('link');
-            $table->string('reward');
+            $table->integer('reward');
             $table->string('logo');
             $table->integer('fee');
             $table->integer('participant');
             $table->integer('score');
+            $table->integer('repeat');
             $table->timeStamps();
 
             $table->foreign('type')->references('id')->on('type_trophies');

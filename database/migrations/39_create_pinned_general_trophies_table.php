@@ -11,14 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pinned_major_trophies', function (Blueprint $table) {
+        Schema::create('pinned_general_trophies', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user');
-            $table->unsignedBigInteger('major_trophy');
+            $table->unsignedBigInteger('trophy');
             $table->timeStamps();
 
             $table->foreign('user')->references('id')->on('users');
-            $table->foreign('major_trophy')->references('id')->on('major_trophies');
+            $table->foreign('trophy')->references('id')->on('general_trophies');
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pinned_major_trophies');
+        Schema::dropIfExists('pinned_general_trophies');
     }
 };

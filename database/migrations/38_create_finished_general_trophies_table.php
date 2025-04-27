@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user');
             $table->unsignedBigInteger('trophy');
-            $table->string('pict');
+            $table->string('pict')->nullable();
+            $table->unsignedBigInteger('status');
             $table->timeStamps();
 
             $table->foreign('user')->references('id')->on('users');
             $table->foreign('trophy')->references('id')->on('general_trophies');
+            $table->foreign('status')->references('id')->on('status_finish');
         });
     }
 

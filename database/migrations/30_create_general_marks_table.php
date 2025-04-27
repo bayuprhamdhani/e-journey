@@ -15,11 +15,13 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('student');
             $table->unsignedBigInteger('general_lesson');
+            $table->unsignedBigInteger('semester');
             $table->integer('daily_mark');
             $table->integer('exam_mark');
             $table->timeStamps();
 
             $table->foreign('student')->references('id')->on('students');
+            $table->foreign('semester')->references('id')->on('semesters');
             $table->foreign('general_lesson')->references('id')->on('general_lessons');
         });
     }

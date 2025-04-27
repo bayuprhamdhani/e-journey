@@ -9,7 +9,7 @@
                   <div class="card-header">Register</div>
                   <div class="card-body">
   
-                      <form action="{{ route('registerStudent.post') }} " method="POST">
+                      <form action="{{ route('login') }} " method="POST">
                           @csrf
 
                           <h1>Account Registration</h1>
@@ -55,7 +55,27 @@
                           </div>
 
                           <div class="form-group row mt-3 mb-3 d-none">
-                              <label for="parent" class="col-md-4 col-form-label text-right">Promotor</label>
+                              <label for="promotor" class="col-md-4 col-form-label text-right">Promotor</label>
+                              <div class="col-md-6">
+                                  <input type="text" id="promotor" class="form-control" name="promotor">
+                                  @if ($errors->has('promotor'))
+                                      <span class="text-danger">{{ $errors->first('promotor') }}</span>
+                                  @endif
+                              </div>
+                          </div>
+
+                          <div class="form-group row mt-3 mb-3 d-none">
+                              <label for="parent_type" class="col-md-4 col-form-label text-right">Parent Type</label>
+                              <div class="col-md-6">
+                                  <input type="text" id="parent_type" class="form-control" name="parent_type">
+                                  @if ($errors->has('parent_type'))
+                                      <span class="text-danger">{{ $errors->first('parent_type') }}</span>
+                                  @endif
+                              </div>
+                          </div>
+                          
+                          <div class="form-group row mt-3 mb-3 d-none">
+                              <label for="parent" class="col-md-4 col-form-label text-right">Parent</label>
                               <div class="col-md-6">
                                   <input type="text" id="parent" class="form-control" name="parent">
                                   @if ($errors->has('parent'))
@@ -182,11 +202,11 @@
                             </div>
                         </div>
   
-                          <div class="col-md-6 offset-md-4 mt-3 p-2 d-grid">
-                              <button type="submit" class="btn btn-primary">
-                                  Register
-                              </button>
-                          </div>
+                        <div class="col-md-6 offset-md-4 mt-3 p-2 d-grid">
+    <a href="{{ route('login') }}" class="btn btn-primary">
+        Login
+    </a>
+</div>
                       </form>
                         
                   </div>

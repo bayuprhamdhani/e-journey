@@ -54,9 +54,15 @@ class DatabaseSeeder extends Seeder
         $this->call(StatusTrophySeeder::class);
         $this->call(MajorTrophySeeder::class);
         $this->call(GeneralTrophySeeder::class);
+        $this->call(StatusFinishSeeder::class);
         $this->call(FinishedGeneralTrophySeeder::class);
         $this->call(PinnedGeneralTrophySeeder::class);
         $this->call(FinishedMajorTrophySeeder::class);
         $this->call(PinnedMajorTrophySeeder::class);
+        $this->call(IntelligenceTypeSeeder::class);
+        $this->call(OptionAnswerSeeder::class);
+        $this->call(QuestionDreamSeeder::class);
+        $this->call(AnswerDreamSeeder::class);
+        $this->call(ReccomendMajorSeeder::class);
     }
 }

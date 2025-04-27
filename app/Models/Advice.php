@@ -9,4 +9,5 @@ class Advice extends Model
 {
     use HasFactory;
     protected $table = 'advices'; // Tambahkan ini
+    protected $fillable = ['user', 'advice', 'date', 'status'];
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nis')->unique();
             $table->integer('graduate');
             $table->string('contact');
-            $table->string('pict');
+            $table->string('pict')->nullable();
             $table->string('dream')->nullable();
             $table->unsignedBigInteger('country');
             $table->unsignedBigInteger('province');
@@ -27,6 +27,7 @@ return new class extends Migration
             $table->unsignedBigInteger('major');
             $table->unsignedBigInteger('class')->nullable();
             $table->integer('score')->nullable();
+            $table->integer('pin')->unique();
             $table->timeStamps();
 
             $table->foreign('country')->references('id')->on('countries');
