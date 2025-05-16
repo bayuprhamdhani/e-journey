@@ -12,10 +12,10 @@ class OptionAnswerSeeder extends Seeder
      * Run the database seeds.
      */
     private $option_answers = [
-        [1, "sangat tidak setuju", 1],
-        [2, "tidak setuju", 2],
-        [3, "setuju", 3],
-        [4, "sangat setuju", 4],
+        [1, "enggak banget lah", 1],
+        [2, "enggak sih", 2],
+        [3, "iya lagi", 3],
+        [4, "iya banget tuh", 4],
     ];
 
     public function run(): void

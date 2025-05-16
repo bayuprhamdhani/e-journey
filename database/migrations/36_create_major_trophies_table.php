@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('general_trophies', function (Blueprint $table) {
+        Schema::create('major_trophies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedBigInteger('major');
             $table->unsignedBigInteger('type');
             $table->unsignedBigInteger('committee');
             $table->unsignedBigInteger('status');
@@ -26,8 +27,11 @@ return new class extends Migration
             $table->integer('participant');
             $table->integer('score');
             $table->integer('repeat');
+            $table->unsignedBigInteger('category');
             $table->timeStamps();
 
+            $table->foreign('major')->references('id')->on('majors');
+            $table->foreign('category')->references('id')->on('category_trophies');
             $table->foreign('type')->references('id')->on('type_trophies');
             $table->foreign('committee')->references('id')->on('committees');
             $table->foreign('status')->references('id')->on('status_trophies');
@@ -39,6 +43,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('general_trophies');
+        Schema::dropIfExists('major_trophies');
     }
 };

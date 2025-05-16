@@ -69,17 +69,19 @@
     <div class="container d-flex justify-content-start align-items-start">
         <img src="{{ asset('images/robot1.png') }}" alt="" style="width: 250px; height: 300px; margin-right: 5px;">
         <div class="text-start">
-        <h1 style="font-size: 55px;">
-            Haaai, Selamat datang yaaa kakak...
-        </h1>
-        <h1 style="font-size: 60px;">
-            Ayo wujudkan mimpinya bareng kami !
-        </h1>
+            <h1 style="font-size: 55px;">
+                Haaai, Selamat datang yaaa kakak...
+            </h1>
+            <h1 style="font-size: 60px;">
+                Ayo wujudkan mimpinya bareng kami !
+            </h1>
         </div>
     </div>
     <div class="dream-user">        
         <div class="d-flex justify-content-center align-items-center px-5" style="width: 950px; background-color: #23486A; color: white; font-size: 60px; border-radius: 50px;">
-            <span>Target: {{ Auth::user()->student?->dream ?? 'Konsultasikan jurusan-mu' }}</span>
+            <span>
+                {{ Auth::user()->student?->dream ? 'Target: ' . Auth::user()->student->dream : 'Konsultasikan jurusan-mu' }}
+            </span>
         </div>
     </div>
 </div>

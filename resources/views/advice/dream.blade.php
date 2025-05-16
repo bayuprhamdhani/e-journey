@@ -77,7 +77,54 @@
     .btn-send:hover {
       background-color: #1c3a56;
     }
-  </style>
+
+    @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-animated {
+  animation: fadeInUp 0.5s ease;
+}
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  .typing {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 1s steps(40, end);
+  }
+
+  .typing-dots span {
+  animation: blink 1.5s infinite;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 2px;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+</style>
+
 </head>
 <body>
 
@@ -111,214 +158,177 @@
 
   let currentQuestionIndex = 0;
 
-  function loadQuestion(index) {
-    $.ajax({
-      url: "{{ route('gpt.generate2') }}",
-      type: "POST",
-      data: {
-        _token: "{{ csrf_token() }}",
-        auto_greet: true,
-        index: index
-      },
-      success: function(response) {
-        if (response.done) {
-  const type = response.intelligence_type || "Tidak diketahui";
-  const majors = response.recommended_majors || [];
-
-  let majorList = '';
-  if (majors.length > 0) {
-    majorList = `
-  <ul class="mt-2">
-    ${majors.map(major => `
-      <li class="d-flex justify-content-between align-items-center mb-2">
-        <span>🎓 ${major}</span>
-        <button class="btn btn-sm btn-success add-to-dream" data-major="${major}">
-          Jadikan Impian
-        </button>
-      </li>
-    `).join('')}
-  </ul>
-`;
-  } else {
-    majorList = `<div class="mt-2">Belum ada rekomendasi jurusan.</div>`;
-  }
-
-  $('#chatBox').append(`
-    <div class="d-flex justify-content-start mb-3">
+function loadQuestion(index) {
+  // Tampilkan loading indicator
+  const loadingBubble = $(`
+    <div id="typingIndicator" class="d-flex justify-content-start mb-3 chat-animated">
       <div class="chat-bubble" style="background-color: #23486A; color: white;">
-        Selesai! 🎉 Tipe Kecerdasan kamu adalah ${type}
-        <div class="mt-2">
-          Rekomendasi Jurusan:
-          ${majorList}
-        </div>
+        <span class="typing-dots">
+          <span>.</span><span>.</span><span>.</span>
+        </span>
       </div>
     </div>
   `);
-
-  $('#optionButtons').empty();
+  $('#chatBox').append(loadingBubble);
   scrollToBottom();
-  return;
-}
 
+  $.ajax({
+    url: "{{ route('gpt.generate2') }}",
+    type: "POST",
+    data: {
+      _token: "{{ csrf_token() }}",
+      auto_greet: true,
+      index: index
+    },
+    success: function(response) {
+      // Hapus loading indicator
+      $('#typingIndicator').remove();
 
+      if (response.done) {
+        const type = response.intelligence_type || "Tidak diketahui";
+        const majors = response.recommended_majors || [];
+        let majorList = '';
+        if (majors.length > 0) {
+          majorList = `
+            <ul class="mt-2">
+              ${majors.map(major => `
+              <li class="d-flex justify-content-between align-items-center mb-2">
+                <span>🎓 ${major}</span>
+                <button class="btn btn-sm btn-success add-to-dream" data-major="${major}">
+                  Jadikan Impian
+                </button>
+              </li>
+              `).join('')}
+            </ul>
+          `;
+        } else {
+          majorList = `<div class="mt-2">Belum ada rekomendasi jurusan.</div>`;
+        }
 
-
-        const questionText = $('<div>').text(response.question).html();
         $('#chatBox').append(`
-          <div class="d-flex justify-content-start mb-3">
+          <div class="d-flex justify-content-start mb-3 chat-animated">
             <div class="chat-bubble" style="background-color: #23486A; color: white;">
-              ${questionText}
+              Selesai! 🎉 Tipe Kecerdasan kamu adalah ${type}
+              <div class="mt-2">
+                Rekomendasi Jurusan:
+                ${majorList}
+              </div>
             </div>
           </div>
         `);
 
         $('#optionButtons').empty();
-        response.options.forEach(option => {
-  const button = `
-  <button type="button" class="btn btn-outline-primary rounded-3 option-button" style="min-width: 150px;"
-          data-score="${option.score}" data-question-id="${response.id}" data-answer-id="${option.id}">
-    ${option.text}
-  </button>`;
-
-  $('#optionButtons').append(button);
-});
-
-
         scrollToBottom();
+        return;
       }
-    });
-  }
+
+      const questionText = $('<div>').text(response.question).html();
+      const questionContainer = $(`
+        <div class="d-flex justify-content-start mb-3 chat-animated">
+          <div class="chat-bubble" style="background-color: #23486A; color: white;"></div>
+        </div>
+      `);
+
+      $('#chatBox').append(questionContainer);
+
+      let i = 0;
+      const speed = 20;
+      function typeWriter() {
+        if (i < questionText.length) {
+          questionContainer.find('.chat-bubble').append(questionText.charAt(i));
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          // Setelah selesai mengetik, tampilkan opsi jawaban
+          $('#optionButtons').empty();
+          response.options.forEach(option => {
+            const button = `
+              <button type="button" class="btn btn-outline-primary rounded-3 option-button chat-animated mb-2" style="min-width: 150px;"
+                      data-score="${option.score}" data-question-id="${response.id}" data-answer-id="${option.id}">
+                ${option.text}
+              </button>`;
+            $('#optionButtons').append(button);
+          });
+          scrollToBottom();
+        }
+      }
+
+      typeWriter();
+    }
+  });
+}
+
+
 
   $(document).ready(function() {
-    // Load pertanyaan pertama
-    loadQuestion(currentQuestionIndex);
-
-    // Event klik tombol pilihan jawaban
-    $(document).on('click', '.option-button', function() {
-  $('.option-button').prop('disabled', true);
-
-  const selectedText = $(this).text().trim();
-  const selectedScore = $(this).data('score');
-  const questionId = $(this).data('question-id');
-  const answerId = $(this).data('answer-id');
-  const token = $('input[name="_token"]').val();
-
-  // Tampilkan jawaban user
-  $('#chatBox').append(`
-    <div class="d-flex justify-content-end mb-3">
-      <div class="chat-bubble" style="color: #23486A; background-color: white; border: 1px solid #dee2e6;">
-        ${selectedText}
+    // Tampilkan chat awal
+    $('#chatBox').append(`
+      <div class="d-flex justify-content-start mb-3 chat-animated">
+        <div class="chat-bubble" style="background-color: #23486A; color: white;">
+          Siap untuk mulai tes jurusan?
+        </div>
       </div>
-    </div>
-  `);
+    `);
 
-  // Kirim ke backend
-  $.post("{{ route('gpt.saveAnswer') }}", {
-    _token: token,
-    question_id: questionId,
-    answer_id: answerId
-  });
+    $('#optionButtons').html(`
+      <button type="button" class="btn btn-primary rounded-3 option-button chat-animated" style="min-width: 150px;"
+              data-score="0" data-question-id="initial" data-answer-id="start">
+        SIAP
+      </button>
+    `);
 
-  currentQuestionIndex++;
-  setTimeout(() => {
-    loadQuestion(currentQuestionIndex);
-  }, 500);
-  
-  scrollToBottom();
-});
+    // Klik jawaban
+    $(document).on('click', '.option-button', function() {
+      $('.option-button').prop('disabled', true);
 
-
-
-    // Form submit: kirim prompt manual
-    $('#gptForm').submit(function(e) {
-      e.preventDefault();
-
-      let prompt = $('#prompt').val().trim();
-      if (!prompt) return;
-
-      let token = $('input[name="_token"]').val();
+      const selectedText = $(this).text().trim();
+      const selectedScore = $(this).data('score');
+      const questionId = $(this).data('question-id');
+      const answerId = $(this).data('answer-id');
+      const token = $('input[name="_token"]').val();
 
       $('#chatBox').append(`
-        <div class="d-flex justify-content-end mb-3">
+        <div class="d-flex justify-content-end mb-3 chat-animated">
           <div class="chat-bubble" style="color: #23486A; background-color: white; border: 1px solid #dee2e6;">
-            ${prompt}
+            ${selectedText}
           </div>
         </div>
       `);
-      $('#prompt').val('');
 
-      let loadingId = 'loading-' + Date.now();
-      $('#chatBox').append(`
-        <div id="${loadingId}" class="d-flex justify-content-start mb-3">
-          <div class="chat-bubble fst-italic" style="background-color: #23486A; color: white;">Mengetik...</div>
-        </div>
-      `);
+      if (questionId === 'initial') {
+        loadQuestion(0);
+      } else {
+        $.post("{{ route('gpt.saveAnswer') }}", {
+          _token: token,
+          question_id: questionId,
+          answer_id: answerId
+        });
+
+        currentQuestionIndex++;
+        setTimeout(() => {
+          loadQuestion(currentQuestionIndex);
+        }, 500);
+      }
 
       scrollToBottom();
-
-      $.ajax({
-        url: "{{ route('gpt.generate2') }}",
-        type: "POST",
-        data: {
-          _token: token,
-          prompt: prompt
-        },
-        success: function(response) {
-          const escapedOutput = $('<div>').text(response.output).html().replace(/\n/g, '<br>');
-          const adviceBubble = `
-            <div class="d-flex justify-content-start mb-3">
-              <div class="chat-bubble" style="background-color: #23486A; color: white;">
-                <div>${escapedOutput}</div>
-              </div>
-            </div>
-          `;
-          $('#' + loadingId).replaceWith(adviceBubble);
-          scrollToBottom();
-        },
-        error: function() {
-          $('#' + loadingId).replaceWith(`
-            <div class="d-flex justify-content-start mb-3">
-              <div class="chat-bubble bg-danger text-white">Terjadi kesalahan saat memproses.</div>
-            </div>
-          `);
-          scrollToBottom();
-        }
-      });
-    });
-
-    // Klik "add to advice"
-    $(document).on('click', '.add-to-advice', function() {
-      const adviceText = $(this).data('advice');
-      const token = $('input[name="_token"]').val();
-
-      $.post("{{ route('advice.store') }}", {
-        _token: token,
-        advice: adviceText
-      }, function(response) {
-        if (response.message) {
-          $('#successModal').modal('show');
-        }
-      }).fail(function() {
-        alert("Gagal menambahkan ke Advice.");
-      });
     });
   });
 
   $(document).on('click', '.add-to-dream', function() {
-  const major = $(this).data('major');
-  const token = $('input[name="_token"]').val();
+    const major = $(this).data('major');
+    const token = $('input[name="_token"]').val();
 
-  $.post("{{ route('student.setDream') }}", {
-    _token: token,
-    dream: major
-  }, function(response) {
-    alert(response.message || "Berhasil disimpan!");
-  }).fail(function() {
-    alert("Gagal menyimpan impian.");
+    $.post("{{ route('student.setDream') }}", {
+      _token: token,
+      dream: major
+    }, function(response) {
+      alert(response.message || "Berhasil disimpan!");
+    }).fail(function() {
+      alert("Gagal menyimpan impian.");
+    });
   });
-});
-
 </script>
+
 
 
 </body>

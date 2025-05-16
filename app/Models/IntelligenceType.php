@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class IntelligenceType extends Model
 {
     use HasFactory;
+
+    public function generalLessons()
+    {
+        return $this->belongsToMany(GeneralLesson::class);
+    }
+    
 }

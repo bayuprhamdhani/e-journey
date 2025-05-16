@@ -59,7 +59,7 @@ class AuthController extends Controller
 
             session(['accessToken' => $token->plainTextToken]);
 
-            return redirect()->intended('dashboard')
+            return redirect()->intended('dream')
                         ->withSuccess('You have Successfully loggedin with token');
         }
   

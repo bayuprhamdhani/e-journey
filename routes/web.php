@@ -20,7 +20,7 @@ Route::post('/gpt3', [GPTController::class, 'generate3'])->name('gpt.generate3')
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/', function () {
-    return view('dashboard');
+    return view('login');
 });
 // web.php
 Route::post('/trophies/{type}/{id}/pin', [TrophyController::class, 'pin'])->name('trophy.pin');

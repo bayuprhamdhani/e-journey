@@ -50,6 +50,7 @@ class DatabaseSeeder extends Seeder
         $this->call(GeneralMarkSeeder::class);
         $this->call(MajorMarkSeeder::class);
         $this->call(ScoreTrophySeeder::class);
+        $this->call(CategoryTrophySeeder::class);
         $this->call(TypeTrophySeeder::class);
         $this->call(StatusTrophySeeder::class);
         $this->call(MajorTrophySeeder::class);
@@ -64,5 +65,7 @@ class DatabaseSeeder extends Seeder
         $this->call(QuestionDreamSeeder::class);
         $this->call(AnswerDreamSeeder::class);
         $this->call(ReccomendMajorSeeder::class);
+        $this->call(GeneralLessonIntelligenceTypeSeeder::class);
+        $this->call(MajorLessonIntelligenceTypeSeeder::class);
     }
 }
