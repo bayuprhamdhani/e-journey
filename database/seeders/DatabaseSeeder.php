@@ -39,9 +39,9 @@ class DatabaseSeeder extends Seeder
         $this->call(SemesterSeeder::class);
         $this->call(MonthSeeder::class);
         $this->call(WeekSeeder::class);
-        $this->call(TaskSeeder::class);
-        $this->call(ScoreTaskSeeder::class);
-        $this->call(FinishedTaskSeeder::class);
+        //$this->call(TaskSeeder::class);
+        //$this->call(ScoreTaskSeeder::class);
+        //$this->call(FinishedTaskSeeder::class);
         $this->call(StatusAdviceSeeder::class);
         $this->call(AdviceSeeder::class);
         $this->call(TotalMarkSeeder::class);

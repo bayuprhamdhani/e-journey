@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('tasks', function (Blueprint $table) {
@@ -19,19 +16,18 @@ return new class extends Migration
             $table->unsignedBigInteger('semester');
             $table->unsignedBigInteger('month');
             $table->unsignedBigInteger('week');
-            $table->timeStamps();
+            $table->timestamps();
 
             $table->foreign('user')->references('id')->on('users');
             $table->foreign('semester')->references('id')->on('semesters');
             $table->foreign('month')->references('id')->on('months');
             $table->foreign('week')->references('id')->on('weeks');
 
+            // Tambahkan ini agar satu user tidak bisa punya dua task dengan nama yang sama
+            $table->unique(['user', 'task', 'semester', 'month', 'week']);
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('tasks');

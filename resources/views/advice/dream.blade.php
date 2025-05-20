@@ -314,19 +314,38 @@ function loadQuestion(index) {
     });
   });
 
-  $(document).on('click', '.add-to-dream', function() {
-    const major = $(this).data('major');
-    const token = $('input[name="_token"]').val();
+$(document).on('click', '.add-to-dream', function () {
+  const major = $(this).data('major');
+  const token = $('input[name="_token"]').val();
 
-    $.post("{{ route('student.setDream') }}", {
-      _token: token,
-      dream: major
-    }, function(response) {
-      alert(response.message || "Berhasil disimpan!");
-    }).fail(function() {
-      alert("Gagal menyimpan impian.");
+  $.post("{{ route('student.setDream') }}", {
+    _token: token,
+    dream: major
+  }).done(function (response) {
+    alert(response.message);
+    const plans = response.tasks_plan;
+
+    // Kirim 1 per 3 detik
+    plans.forEach((item, index) => {
+      setTimeout(() => {
+        $.post("{{ route('student.generateTask') }}", {
+          _token: token,
+          semester: item.semester,
+          month: item.month,
+          year: item.year
+        }).done(function (res) {
+          console.log(res.message);
+        }).fail(function () {
+          console.error(`Gagal membuat tugas bulan ${item.month}, semester ${item.semester}`);
+        });
+      }, index * 3000); // jeda 3 detik
     });
+
+  }).fail(function () {
+    alert("Gagal menyimpan impian.");
   });
+});
+
 </script>
 
 

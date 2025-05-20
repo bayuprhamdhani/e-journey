@@ -7,6 +7,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\AuthControllerStudent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GPTController;
+
+Route::post('/student/generate-task', [GPTController::class, 'generateTaskPerMonth'])->name('student.generateTask');
 Route::post('/student/set-dream', [GPTController::class, 'setDream'])->name('student.setDream');
 Route::post('/answer-dream/store', [GPTController::class, 'storeAnswerDream'])->name('answer-dream.store');
 Route::post('/gpt/save-answer', [GPTController::class, 'saveAnswer'])->name('gpt.saveAnswer');
@@ -20,7 +22,7 @@ Route::post('/gpt3', [GPTController::class, 'generate3'])->name('gpt.generate3')
 
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/', function () {
-    return view('login');
+    return view('dashboard');
 });
 // web.php
 Route::post('/trophies/{type}/{id}/pin', [TrophyController::class, 'pin'])->name('trophy.pin');

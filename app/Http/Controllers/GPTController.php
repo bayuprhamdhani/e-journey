@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Http;
+use App\Models\Task;
 use Illuminate\Support\Facades\DB;
 use App\Models\AnswerDream;
 use App\Models\ReccomendMajor;
@@ -9,7 +12,6 @@ use App\Models\ScoreIntelligence;
 use App\Models\IntelligenceType;
 use App\Models\OptionAnswer;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Carbon;
@@ -308,7 +310,6 @@ public function storeAnswerDream(Request $request)
     return response()->json(['message' => 'Jawaban berhasil disimpan']);
 }
 
-
 public function setDream(Request $request)
 {
     $user = Auth::user();
@@ -322,7 +323,258 @@ public function setDream(Request $request)
     $student->dream = $dream;
     $student->save();
 
-    return response()->json(['message' => 'Impian berhasil disimpan!']);
+    $now = Carbon::now();
+    $currentMonth = $now->month;
+    $currentYear = $now->year;
+
+    $angkatan = (int) $student->graduate;
+    $selisihTahun = $currentYear - $angkatan;
+
+    $currentSemester = match ($selisihTahun) {
+        1 => ($currentMonth <= 6 ? 1 : 2),
+        2 => ($currentMonth <= 6 ? 3 : 4),
+        3 => ($currentMonth <= 6 ? 5 : 6),
+        default => 1,
+    };
+
+    $bulanTugas = [];
+
+    for ($smt = $currentSemester; $smt <= 6; $smt++) {
+        $isGanjil = $smt % 2 == 1;
+        $bulanAwal = $isGanjil ? 7 : 1;
+        $bulanAkhir = $isGanjil ? 12 : 6;
+        $tahunSemester = $angkatan + intdiv($smt - 1, 2);
+
+        for ($bln = $bulanAwal; $bln <= $bulanAkhir; $bln++) {
+            if ($smt == $currentSemester && $tahunSemester == $currentYear && $bln < $currentMonth) {
+                continue;
+            }
+
+            $bulanTugas[] = [
+                'semester' => $smt,
+                'month' => $bln,
+                'year' => $tahunSemester,
+            ];
+        }
+    }
+
+    return response()->json([
+        'message' => 'Impian berhasil disimpan.',
+        'tasks_plan' => $bulanTugas,
+    ]);
+}
+
+
+
+public function generateTask(Request $request)
+{
+    $user = Auth::user();
+    $student = $user->student;
+
+    if (!$student) {
+        return response()->json(['message' => 'Data siswa tidak ditemukan.'], 404);
+    }
+
+    $dream = $request->input('dream');
+    $student->dream = $dream;
+    $student->save();
+
+    $now = Carbon::now();
+    $currentMonth = $now->month;
+    $currentYear = $now->year;
+
+    $angkatan = (int) $student->graduate;
+    $selisihTahun = $currentYear - $angkatan;
+
+    $currentSemester = match($selisihTahun) {
+        1 => ($currentMonth <= 6 ? 1 : 2),
+        2 => ($currentMonth <= 6 ? 3 : 4),
+        3 => ($currentMonth <= 6 ? 5 : 6),
+        default => 1,
+    };
+
+    $bulanTugas = [];
+
+    for ($smt = $currentSemester; $smt <= 6; $smt++) {
+        $isGanjil = $smt % 2 == 1;
+        $bulanAwal = $isGanjil ? 7 : 1;
+        $bulanAkhir = $isGanjil ? 12 : 6;
+        $tahunSemester = $angkatan + intdiv($smt - 1, 2);
+
+        for ($bln = $bulanAwal; $bln <= $bulanAkhir; $bln++) {
+            if ($smt == $currentSemester && $tahunSemester == $currentYear && $bln < $currentMonth) {
+                continue;
+            }
+
+            $bulanTugas[] = [
+                'semester' => $smt,
+                'month' => $bln,
+                'year' => $tahunSemester,
+            ];
+        }
+    }
+
+    try {
+        foreach ($bulanTugas as $item) {
+            $semester = $item['semester'];
+            $bulan = $item['month'];
+            $tahun = $item['year'];
+
+            // 🔀 Prompt dengan variasi konteks (semester, bulan, tahun)
+            $prompt = <<<PROMPT
+Kamu adalah guru pembimbing siswa SMA yang ingin masuk jurusan "{$dream}".
+Bulan ini adalah bulan ke-{$bulan} tahun {$tahun}, semester {$semester}.
+
+Buatkan 12 tugas (untuk 1 bulan, 3 tugas per minggu) yang membantu siswa SMA mempersiapkan diri masuk jurusan tersebut melalui penguatan pelajaran sekolah seperti Matematika, Fisika, Kimia, Biologi, atau pelajaran relevan lainnya.
+
+Setiap tugas harus:
+* Berhubungan dengan pelajaran SMA yang relevan dengan jurusan tersebut.
+* Bersifat realistis, kreatif, dan bisa dikerjakan siswa SMA.
+* Ditandai dengan label tingkat kesulitan: (Sulit), (Agak Sulit), atau (Mudah).
+* Format: Nomor. [Kalimat tugas] (Tingkat Kesulitan)
+
+Contoh:
+1. Kerjakan latihan soal tentang sistem pernapasan dari buku Biologi kelas 11 (Mudah)
+
+Hasilkan hanya 12 tugas seperti itu.
+PROMPT;
+
+            $response = Http::withToken(env('OPENAI_API_KEY'))->post('https://api.openai.com/v1/chat/completions', [
+                'model' => 'gpt-4.1',
+                'messages' => [
+                    ['role' => 'user', 'content' => $prompt],
+                ],
+                'temperature' => 0.7,
+            ]);
+
+            $content = $response['choices'][0]['message']['content'] ?? null;
+
+            if ($content) {
+                $parsedTasks = preg_split('/\n+/', trim($content));
+                $parsedTasks = array_filter($parsedTasks, fn($line) => preg_match('/^\d+\./', $line));
+                $parsedTasks = array_slice($parsedTasks, 0, 12);
+
+                $week = 1;
+                $weekCounter = 0;
+
+                foreach ($parsedTasks as $line) {
+                    $score = 50;
+                    if (stripos($line, '(Sulit)') !== false) {
+                        $score = 100;
+                    } elseif (stripos($line, '(Mudah)') !== false) {
+                        $score = 25;
+                    }
+
+                    $taskText = preg_replace('/^\d+\.\s*/', '', $line);
+                    $taskText = preg_replace('/\((Sulit|Agak Sulit|Mudah)\)/i', '', $taskText);
+
+                    Task::create([
+                        'task' => trim($taskText),
+                        'score' => $score,
+                        'user' => $user->id,
+                        'semester' => $semester,
+                        'month' => $bulan,
+                        'week' => $week,
+                    ]);
+
+                    $weekCounter++;
+                    if ($weekCounter >= 3) {
+                        $week++;
+                        $weekCounter = 0;
+                    }
+                }
+            } else {
+                return response()->json(['message' => "Gagal membuat tugas untuk bulan {$bulan} tahun {$tahun}."], 500);
+            }
+        }
+
+        return response()->json(['message' => 'Impian dan semua tugas berhasil disimpan!']);
+    } catch (\Exception $e) {
+        return response()->json(['message' => 'Impian disimpan, tetapi gagal membuat tugas.', 'error' => $e->getMessage()], 200);
+    }
+}
+
+
+public function generateTaskPerMonth(Request $request)
+{
+    $user = Auth::user();
+    $student = $user->student;
+    $dream = $student->dream;
+
+    $semester = $request->input('semester');
+    $month = $request->input('month');
+    $year = $request->input('year');
+
+    $prompt = <<<PROMPT
+Kamu adalah guru pembimbing siswa SMA yang ingin masuk jurusan "$dream".
+Buatkan 12 tugas (untuk 1 bulan, 3 tugas per minggu) yang membantu siswa SMA mempersiapkan diri masuk jurusan tersebut melalui penguatan pelajaran sekolah seperti Matematika, Fisika, Kimia, Biologi, atau pelajaran relevan lainnya.
+
+Setiap tugas harus:
+
+* Berhubungan dengan pelajaran SMA yang relevan dengan jurusan tersebut.
+* Bersifat realistis, kreatif, dan bisa dikerjakan siswa SMA.
+* Ditandai dengan label tingkat kesulitan: (Sulit), (Agak Sulit), atau (Mudah).
+* Format: Nomor. [Kalimat tugas] (Tingkat Kesulitan)
+
+Contoh:
+1. Kerjakan latihan soal tentang sistem pernapasan dari buku Biologi kelas 11 (Mudah)
+
+Hasilkan hanya 12 tugas seperti itu.
+PROMPT;
+
+    try {
+        $response = Http::withToken(env('OPENAI_API_KEY'))->post('https://api.openai.com/v1/chat/completions', [
+            'model' => 'gpt-4.1',
+            'messages' => [
+                ['role' => 'user', 'content' => $prompt],
+            ],
+            'temperature' => 0.7,
+        ]);
+
+        $content = $response['choices'][0]['message']['content'] ?? null;
+
+        if ($content) {
+            $parsedTasks = preg_split('/\n+/', trim($content));
+            $parsedTasks = array_filter($parsedTasks, fn($line) => preg_match('/^\d+\./', $line));
+            $parsedTasks = array_slice($parsedTasks, 0, 12);
+
+            $week = 1;
+            $weekCounter = 0;
+
+            foreach ($parsedTasks as $line) {
+                $score = 50;
+                if (stripos($line, '(Sulit)') !== false) {
+                    $score = 100;
+                } elseif (stripos($line, '(Mudah)') !== false) {
+                    $score = 25;
+                }
+
+                $taskText = preg_replace('/^\d+\.\s*/', '', $line);
+                $taskText = preg_replace('/\((Sulit|Agak Sulit|Mudah)\)/i', '', $taskText);
+
+                Task::create([
+                    'task' => trim($taskText),
+                    'score' => $score,
+                    'user' => $user->id,
+                    'semester' => $semester,
+                    'month' => $month,
+                    'week' => $week,
+                ]);
+
+                $weekCounter++;
+                if ($weekCounter >= 3) {
+                    $week++;
+                    $weekCounter = 0;
+                }
+            }
+
+            return response()->json(['message' => "Tugas bulan $month semester $semester berhasil dibuat!"]);
+        }
+
+        return response()->json(['message' => 'Gagal membuat tugas.'], 500);
+    } catch (\Exception $e) {
+        return response()->json(['message' => 'Terjadi kesalahan saat membuat tugas.'], 500);
+    }
 }
 
 }
